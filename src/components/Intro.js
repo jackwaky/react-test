@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import {
   Container,
@@ -19,6 +19,12 @@ import help from "../images/Help.png";
 import "../font/font.css";
 
 function Intro() {
+  const [color, setcolor] = useState("white");
+
+  const changeColor = (e) => {
+    setcolor(color === "white" ? "blue" : "white");
+  };
+
   return (
     <Container imgUrl={bg}>
       <Contents>
@@ -28,8 +34,8 @@ function Intro() {
             <Row flex={570}>
               <Logo src={logo}></Logo>
             </Row>
-            <Row flex={750}>
-              <Whatwedo>What we do</Whatwedo>
+            <Row flex={750} color={color}>
+              <Whatwedo onClick={changeColor}>What we do</Whatwedo>
               <Who>who we are</Who>
               <Contact>contact</Contact>
               <Ending>ending</Ending>
@@ -69,54 +75,45 @@ const Whatwedo = styled.span`
   /* width: 6.09vw; */
   aspect-ratio: 139 / 26;
 
-  text-align: center;
+  /* text-align: center;
 
   margin: auto 0;
 
   color: white;
   font-size: 1.041vw;
   font-family: "Mont";
-  white-space: normal;
+  white-space: normal; */
 `;
 
 const Who = styled.span`
   /* width: 6.09vw; */
   aspect-ratio: 117 / 26;
-
-  text-align: center;
-
-  margin: auto 0;
-
-  color: white;
-  font-size: 1.041vw;
-  font-family: "Mont";
-  white-space: normal;
 `;
 
 const Contact = styled.span`
   /* width: 4.375vw; */
   aspect-ratio: 84 / 26;
 
-  text-align: center;
+  /* text-align: center;
   margin: auto 0;
 
   color: white;
   font-size: 1.041vw;
   font-family: "Mont";
-  white-space: normal;
+  white-space: normal; */
 `;
 
 const Ending = styled.span`
   /* width: 3.75vw; */
   aspect-ratio: 72 / 26;
 
-  text-align: center;
+  /* text-align: center;
   margin: auto 0;
 
   color: white;
   font-size: 1.041vw;
   font-family: "Mont";
-  white-space: normal;
+  white-space: normal; */
 `;
 
 const Help = styled.img`

@@ -29,6 +29,7 @@ const ColumnRev = styled.div`
   flex: ${(props) => props.flex};
   flex-direction: column-reverse;
   position: relative;
+
   /* flex-wrap: wrap; */
 `;
 
@@ -38,6 +39,26 @@ const Row = styled.div`
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+
+  color: ${(props) => props.color};
+  font-size: 1.041vw;
+  font-family: "Mont";
+  white-space: normal;
+  margin: auto 0;
 `;
+
+// const Text = styled.span`
+//   text-align: center;
+//   justify-content: space-between;
+//   position: relative;
+//   flex-direction: row;
+//   display: flex;
+//   margin: auto 0;
+
+//   color: ${(props) => props.color};
+//   font-size: 1.041vw;
+//   font-family: "Mont";
+//   white-space: normal;
+// `;
 
 export { Container, Contents, Column, ColumnRev, Row };
